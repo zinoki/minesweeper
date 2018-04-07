@@ -2,9 +2,14 @@ import React from 'react';
 import './BoardRow.css';
 
 
-const BoardRow = () => {
+const BoardRow = ({ row }) => {
   return (
-    <div>Rowwwww</div>
+    <tr>
+      {row.map((square, colIndex) => 
+        <td className={square || "cell"} key={colIndex}>{square}
+        </td>
+      )}
+    </tr>
   )
 }
 

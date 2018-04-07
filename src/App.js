@@ -21,7 +21,7 @@ class App extends Component {
         <p className="App-intro">
         Click on a square to get started
         </p>
-        <Board dimension={10} />
+        <Board board={this.state.board} />
       </div>
     );
   }

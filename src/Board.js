@@ -1,16 +1,15 @@
 import React from 'react';
 import './Board.css';
 import BoardRow from './BoardRow';
-import { boardMaker } from './boardMaker';
 
-const Board = ({ dimension }) => {
-  console.log(boardMaker(dimension));
+const Board = ({ board }) => {
     return (
-      <div>
-        <div id="board">Helloasdfaooo</div>
-        {boardMaker(dimension)}
-          <BoardRow />
-        </div>
+        <table id="board">
+          <tbody>
+            {board.map((row, rowIndex) => 
+              <BoardRow row={row} rowIndex={rowIndex} key={rowIndex}/> )}
+          </tbody>
+        </table>
     );
 }
 
